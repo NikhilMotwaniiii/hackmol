@@ -6,7 +6,7 @@ import { filterData, ambsAround } from '../globalComp/dummyData';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 import MapView,{ PROVIDER_GOOGLE, Marker } from 'react-native-maps';
 
-import { mapStyle } from '../globalComp/mapLayout';
+import { mapLayout } from '../globalComp/mapLayout';
 import * as Location from 'expo-location';
 
 const SCREEN_WIDTH = Dimensions.get("window").width
@@ -73,7 +73,7 @@ const AmbScreen = ({navigation}) => {
              <View style={styles.view1}>
                 <View style={styles.view8}>
                     <Text style={styles.text2}>You're in an emergency?</Text>
-                     <TouchableOpacity onPress={()=>{navigation.navigate("EmerScreen")}}>
+                     <TouchableOpacity onPress={()=>{navigation.navigate("EmerScreen",{state:0})}}>
                        <View style={styles.button1}>
                          <Text style={styles.button1Text}>Declare Emergency</Text>
                        </View>
@@ -140,7 +140,7 @@ const AmbScreen = ({navigation}) => {
              <View style={{alignItems:"center",justifyContent:"center"}}>
                  <MapView
                  ref={_map} 
-                 provider={PROVIDER_GOOGLE} style={styles.map} customMapStyle={mapStyle}
+                 provider={PROVIDER_GOOGLE} style={styles.map} customMapStyle={mapLayout}
                  showsUserLocation={true} followsUserLocation={true} initialRegion={{...ambsAround[0],latitudeDelta:0.008,longitudeDelta:0.008}} >
                   
                   {
