@@ -1,4 +1,4 @@
-export const mapStyle = [
+export const mapLayout = [
     {
         "featureType": "administrative",
         "elementType": "geometry.fill",

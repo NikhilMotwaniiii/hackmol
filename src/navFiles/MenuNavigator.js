@@ -20,7 +20,7 @@ export default function DrawerNavigator(){
                 
                 drawerIcon:({focussed,size})=><MaterialCommunityIcons name="home"
                                                                       color={focussed?'#7cc':colors.grey2}
-                                                                      size={size}
+                                               size={size}
                                                                       />,
              headerShown : false
             }}

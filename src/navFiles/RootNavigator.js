@@ -4,6 +4,7 @@ import DrawerNavigator from './MenuNavigator';
 
 export default function RootNavigator(){
     return(
+        
         <NavigationContainer>
             <DrawerNavigator></DrawerNavigator>
         </NavigationContainer>
