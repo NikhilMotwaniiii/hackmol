@@ -14,52 +14,13 @@ export const rideData =[
     {street:"179 8th Ave",area:"Bezuidenhout Valley,Johannesburg",id:"4"},
 ];
 
-// export const carTypeData =[
-//     {title:"Popular",
-//      data:[
-//     {name:"Uber Go",group :2, price:7,image: require('../../assets/uberGo.png'),note:"Affordable.compact rides",promotion:5 ,time:"20:19",id:"0"},
-//     {name:"UberX",group :3, price:5.5,image: require('../../assets/uberX.png'),note:"Affordable everyday trips",promotion:0,time:"20:20", id:"1"},
-//     {name:"Connect", group:0, price:12.6,image: require('../../assets/uberConnect.png'),note:"Send and receive packages",promotion:10,time:"20:33", id:"2"}
-//      ]
-//     },
-
-//     {title:"Premium",
-//     data:[
-//    {name:"Black",group :3, price:17.4,image: require('../../assets/uberBlack.png'),note:"Premium trips in luxury cars",promotion:0,time:"20:31",id:"3"},
-//    {name:"Van", group:6, price:22.3,image: require('../../assets/uberVan.png'),note:"Rides for groups up to 6",promotion:12,time:"20:31", id:"4"},
-//     ]
-//    },
-
-//    {title:"More",
-//    data:[
-//   {name:"Assist",group :3, price:35.3,image: require('../../assets/uberAssist.png'),note:"Special assistance from certified drivers",promotion:26,time:"20:25",id:"5"},
-//    ]
-//   },
-
-// ];
-
-//  export const requestData = [{
-//     name:"For Me",id:0
-// },
-// {
-//     name:"For Someone",id:1
-// }
-
-// ]
-
-// export const rideOptions = [{name:"Personal",icon:"account", id:"0"},
-// {name:"Business",icon:"briefcase", id:"1"},  
-
-// ];
-
-// export const paymentOptions = [{image:require('../../assets/visaIcon.png'),text:"Visa ...0476"},
-//                                 {image:require('../../assets/cashIcon.png'),text:"Cash"}]
-
-// export const availableServices = ["Uber Go","UberX","Uber connect","Uber Black","Uber Van","Uber Assist"]
-
 export const ambsAround = [
     {latitude:23.104993,longitude:72.673101},
     {latitude:23.104203,longitude:72.666209},
     {latitude:23.098284,longitude:72.666209},
     {latitude:23.101325,longitude:72.668625},
+    {latitude:23.151320,longitude:72.668625},
+    {latitude:31.380150701789404,longitude:75.54455437919316},
+    {latitude:31.391442531206557,longitude:75.53489467133227},
+    {latitude:31.39381375776921,longitude:75.5328090339832},
 ];

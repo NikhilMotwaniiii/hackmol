@@ -72,13 +72,13 @@ const renderFlatListItems = useCallback(({item})=>(
           <View>
           <TouchableOpacity onPress={()=>{navigation.navigate("DestScreen")}}>
              <View style={styles.view6}>
-               <Text style={styles.text10}>From where?</Text>
+               <Text style={styles.text10}></Text>
              </View>
              </TouchableOpacity>
              <View style={styles.view7}>
              <TouchableOpacity>
                <View style={styles.view6}>
-                  <Text style={styles.text10}>...</Text>
+                  <Text style={styles.text10}>To ? </Text>
                </View>
              </TouchableOpacity>
                <View style={styles.view8}>
