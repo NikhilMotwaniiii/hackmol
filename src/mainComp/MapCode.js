@@ -21,7 +21,7 @@ export default class MapCode extends Component {
   
   componentDidUpdate(){
     setTimeout(()=>{
-      if(this.props.userDestination.lat !== null){
+      if(this.props.userDestination.latitude !== null){
         this._map.current.fitToCoordinates(
           [this.props.userOrigin,this.props.userDestination],{
             edgePadding:{top:450,right:50,left:50,bottom:350},
@@ -39,13 +39,13 @@ export default class MapCode extends Component {
                  
                    provider={PROVIDER_GOOGLE} style={styles.map} customMapStyle={mapLayout}  >
                     {
-                      this.props.userOrigin.lat != null &&
+                      this.props.userOrigin.latitude != null &&
                       <Marker coordinate={this.props.userOrigin} anchor={{x:0.5,y:0.5}}>
                        <Image source={require('../../assets/location.png')} style={styles.markerOrigin2} resizeMode="cover" />
 
                       </Marker>
                  }
-                 { this.props.userDestination.lat != null &&   
+                 { this.props.userDestination.latitude != null &&   
                         <Marker coordinate = {this.props.userDestination} anchor = {{x:0.5,y:0.5}} >
                             <Image 
                                 source ={require('../../assets/location.png')}
@@ -54,11 +54,11 @@ export default class MapCode extends Component {
                             />
                         </Marker>
                      }
-                    {this.props.userDestination.lat !== null &&
+                    {this.props.userDestination.latitude !== null &&
                         <MapViewDirections 
                           origin={this.props.userOrigin}
                           destination={this.props.userDestination}
-                          apikey={'AIzaSyCzV_NZk6lepuKdCzrrj9kPn4uRnkBI_ro'}
+                          apikey={'AIzaSyDrV5b0TGLkClAVTBRph-D8TrWbtyIDKHY'}
                           strokeWidth={4}
                           strokeColor={colors.black}
                         />

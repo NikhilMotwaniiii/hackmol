@@ -67,7 +67,7 @@ const DestScreen = (navigation) => {
                 autoFocus ={true}
                 styles = {autoComplete}
                 query ={{
-                    key:'AIzaSyCzV_NZk6lepuKdCzrrj9kPn4uRnkBI_ro',
+                    key:'AIzaSyDrV5b0TGLkClAVTBRph-D8TrWbtyIDKHY',
                     language:"en"
                 }}
 
@@ -78,9 +78,19 @@ const DestScreen = (navigation) => {
                         address:details.formatted_address,
                         name:details.name
                     }})
-
+                    console.log(details)
                     setDestination(true)
                 }}
+
+                // onPress={(data,details = null) => {
+                //     dispatch(
+                //         setOrigin({
+                //             location: details.geometry.location,
+                //             description: data.description
+                //         })
+                //     );
+                //     dispatch(setDestination(null));
+                // }}
 
             />
             }
@@ -98,7 +108,7 @@ const DestScreen = (navigation) => {
                 autoFocus ={true}
                 styles = {autoComplete}
                 query ={{
-                    key:'AIzaSyCzV_NZk6lepuKdCzrrj9kPn4uRnkBI_ro',
+                    key:'AIzaSyDrV5b0TGLkClAVTBRph-D8TrWbtyIDKHY',
                     language:"en"
                 }}
 
