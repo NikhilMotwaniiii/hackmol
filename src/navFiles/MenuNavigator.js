@@ -18,7 +18,7 @@ export default function DrawerNavigator(){
             options={{
                 title:"Home",
                 
-                drawerIcon:({focussed,size})=><MaterialCommunityIcons name="home"
+                drawerIcon:({focussed,size})=><MaterialCommunityIcons name="home" onPress={()=>navigation.navigate('HomeStack')}
                                                                       color={focussed?'#7cc':colors.grey2}
                                                size={size}
                                                                       />,
@@ -26,6 +26,8 @@ export default function DrawerNavigator(){
             }}
             
             />
+            
         </Drawer.Navigator>
+        
     )
 }

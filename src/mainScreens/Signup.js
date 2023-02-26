@@ -1,6 +1,6 @@
 import { Button, Pressable, SafeAreaView, StyleSheet, Text, TextInput, View } from 'react-native'
 import React from 'react'
-import { dropdown } from 'react-native-material-dropdown-v2-fixed'
+// import { dropdown } from 'react-native-material-dropdown-v2-fixed'
 
 const Signup = () => {
     const [mobile, onChangeMobile] = React.useState('');
@@ -55,9 +55,7 @@ const Signup = () => {
           placeholder="Confirm Password"
           keyboardType="default"
         />
-        <dropdown>
-            <Text>Choose User Type</Text>
-        </dropdown>
+
         <Pressable style={styles.button}>
             <Text style={styles.text}>Sign Up</Text>
         </Pressable>

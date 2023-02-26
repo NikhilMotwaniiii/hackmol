@@ -30,11 +30,11 @@ export const colors = {
     statusbar:"#ff8c52",
     heaherText:"white",
     lightgreen: '#66DF48',
-    blue:'#286ef0',
+    blue:'#4daffa',
     red: '#f2291b',
     black: "#000000",
     white: "#ffffff",
-    darkBlue:"#1e5ac9",
+    darkBlue:"#4daffa",
     pagebackground:"white"
 
     

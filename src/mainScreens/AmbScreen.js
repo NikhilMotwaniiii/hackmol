@@ -1,4 +1,4 @@
-import { StyleSheet, Text, View, Dimensions, StatusBar, ScrollView, Image, FlatList, TouchableOpacity } from 'react-native'
+import { StyleSheet, Text, View, Dimensions, StatusBar, ScrollView, Image, FlatList, TouchableOpacity, Button } from 'react-native'
 import React, { useState,useRef,useEffect } from 'react'
 import { colors,parameters } from '../globalComp/appStyles'
 
@@ -9,7 +9,14 @@ import MapView,{ PROVIDER_GOOGLE, Marker } from 'react-native-maps';
 import { mapLayout } from '../globalComp/mapLayout';
 import * as Location from 'expo-location';
 
+import { Directions } from 'react-native-gesture-handler';
+import DateTimePicker from '@react-native-community/datetimepicker';
+import DatePicker from 'react-native-date-picker'
+
+// const [date, setDate] = useState(new Date())
+
 const SCREEN_WIDTH = Dimensions.get("window").width
+
 
 
 const AmbScreen = ({navigation}) => {
@@ -56,8 +63,8 @@ const AmbScreen = ({navigation}) => {
           //  console.log(latlng)
   ,[]})
 
-
   return (
+
     <View style={styles.container}>
        <View style={styles.headComp}>
           <View style={styles.icon1}>
@@ -69,41 +76,27 @@ const AmbScreen = ({navigation}) => {
        </View>
        <ScrollView bounces={false}>
         <View style={styles.home}>
-             <Text style={styles.text1}>Blah blah blah</Text>
+             <Text style={styles.text1}>Is there an emergency?</Text>
              <View style={styles.view1}>
                 <View style={styles.view8}>
-                    <Text style={styles.text2}>You're in an emergency?</Text>
+                    <Text style={styles.text2}>Because every second counts !!</Text>
                      <TouchableOpacity onPress={()=>{navigation.navigate("EmerScreen",{state:0})}}>
                        <View style={styles.button1}>
-                         <Text style={styles.button1Text}>Declare Emergency</Text>
+                         <Text style={styles.button1Text}>Declare Emergency!</Text>
                        </View>
                      </TouchableOpacity>
                 </View>
              </View>
         </View>
-        <View>
-                <FlatList numRows={4}
-                horizontal={true}
-                showsHorizontalScrollIndicator={false}
-                data={filterData}
-                keyExtractor={(item)=>item.id}
-                renderItem={({item})=>(
-                    <View style={styles.card}>
-                      <View style={styles.view2}>
-                        <Image style={styles.image2} source={item.image}></Image>
-                      </View>
-                      <View style={styles.title}>
-                        <Text style={styles.title}>{item.name}</Text>
-                      </View>
-                    </View>
-                )}
-                ></FlatList>
-             </View>
+        
              <View style={styles.view3}>
                 <Text style={styles.text3}>Where to?</Text>
+                
                 <View style={styles.view4}>
                    <MaterialCommunityIcons name="clock-time-seven" size={26} color={colors.grey1}/>
-                   <Text style={{marginLeft:5}}>Now</Text>
+                   
+                    <Text style={{color:colors.grey1,fontSize:18,marginLeft:10}}>Recent</Text>
+                  
                    <MaterialCommunityIcons name="chevron-down" size={26} color={colors.grey1}/>
 
                 </View>
@@ -158,6 +151,8 @@ const AmbScreen = ({navigation}) => {
       </ScrollView>
       <StatusBar style="light" backgroundColor={colors.darkBlue} translucent={true}></StatusBar>
     </View>
+
+
   )
 }
 
@@ -187,6 +182,10 @@ const styles = StyleSheet.create({
         height:60,width:60,
         paddingLeft:20
       },
+      imagebg:{
+        flex: 1,
+        justifyContent: 'center',
+      },
     
       home:{
         backgroundColor:colors.blue,
@@ -198,7 +197,7 @@ const styles = StyleSheet.create({
         color:colors.black,
         fontSize:21,
         fontWeight:'700',
-        paddingBottom:20,
+        paddingBottom:0,
         paddingTop:20
       },
       text2:{
@@ -212,13 +211,13 @@ const styles = StyleSheet.create({
         paddingTop:30
       },
       button1:{
-        height:40,
-        width:150,
+        height:50,
+        width:200,
         backgroundColor:colors.red,
         borderRadius:25,
         alignItems:"center",
         justifyContent:"center",
-        marginTop:20
+        marginTop:30
       },
       
       button1Text:{
@@ -297,7 +296,7 @@ const styles = StyleSheet.create({
       
       map:{
          
-      height: 150,
+      height: 350,
        marginVertical: 0,
        width:SCREEN_WIDTH*0.92
       },
