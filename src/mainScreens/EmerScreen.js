@@ -20,20 +20,17 @@ const EmerScreen = ({navigation,route}) => {
 
   const {origin, dispatchOrigin} = useContext(OriginContext)
 
-  const [userOrigin, setUserOrigin] = useState({lat:origin.lat,long:origin.long})
+  const [userOrigin, setUserOrigin] = useState({latitude:origin.latitude,longitude:origin.longitude})
   const {destination,dispatchDestination} = useContext(DestinationContext)
-  const [userDestination,setUserDestination] = useState({lat:destination.lat,
-                                              long:destination.long}) 
+  const [userDestination,setUserDestination] = useState({latitude:destination.latitude,longitude:destination.longitude}) 
 
   const bottomsheet1 =useRef(1);
   const snapPoints1 = useMemo(()=>['70%'],[])
    const handleSheetChange1  = useCallback((index)=>{},[]) 
 
    useEffect(()=>{
-    setUserOrigin({lat:origin.lat,
-        long:origin.long});
-    setUserDestination({lat:destination.lat,
-        long:destination.long})    
+    setUserOrigin({latitude:origin.latitude,longitude:origin.longitude});
+    setUserDestination({latitude:destination.latitude,longitude:destination.longitude})    
 },[origin,destination])
 
 const renderFlatListItems = useCallback(({item})=>(

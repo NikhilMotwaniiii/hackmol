@@ -7,8 +7,8 @@ export const DestinationContext = createContext()
 
 export const OconProvider = (props)=>{
     const [origin,dispatchOrigin] = useReducer(oReducer,{
-        lat : null,
-        long : null,
+        latitude : null,
+        longitude : null,
         address:"",
         name:""
     })
@@ -21,8 +21,8 @@ export const OconProvider = (props)=>{
 
 export const DconProvider = (props)=>{
     const[destination,dispatchDestination] =useReducer(dReducer,{
-                lat:null,
-                long:null,
+        latitude:null,
+                longitude:null,
                 address:"",
                 name:""
     })

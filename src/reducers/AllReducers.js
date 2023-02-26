@@ -2,8 +2,8 @@ export const oReducer = (state,action) => {
     switch(action.type){
         case 'ADD_ORIGIN':
             return{
-            lat: action.payload.lat,
-            long : action.payload.long,
+            latitude: action.payload.latitude,
+            longitude : action.payload.longitude,
             address : action.payload.address,
             name : action.payload.name
         }
@@ -15,8 +15,8 @@ export const dReducer = (state,action)=>{
     switch(action.type){
         case 'ADD_DESTINATION':
                 return{
-                    lat:action.payload.lat,
-                    long:action.payload.long,
+                    latitude:action.payload.latitude,
+                    longitude:action.payload.longitude,
                     address:action.payload.address,
                     name:action.payload.name
                 }
